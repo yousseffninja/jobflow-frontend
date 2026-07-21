@@ -1,0 +1,28 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Please enter your details to sign in to your account.",
+      "email": "Email Address",
+      "emailPlaceholder": "name@company.com",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "rememberMe": "Remember for 30 days",
+      "signIn": "Sign In",
+      "orContinueWith": "Sign in with Google",
+      "noAccount": "Don't have an account?",
+      "register": "Register",
+      "heroBadge": "Next Gen Recruitment",
+      "heroTitle": "Join the future of job hunting.",
+      "heroSubtitle": "Experience a frictionless application process powered by JobFlow's intelligent ATS matching engine.",
+      "heroFeature1Title": "Fast Track",
+      "heroFeature1Desc": "Apply to top roles in seconds with one-click syncing.",
+      "heroFeature2Title": "AI Insights",
+      "heroFeature2Desc": "Receive real-time feedback on your resume relevance."
+    }
+  },
+  "common": {
+    "appName": "JobFlow",
+    "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."
+  }
+}
