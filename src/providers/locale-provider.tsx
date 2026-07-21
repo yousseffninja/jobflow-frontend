@@ -31,6 +31,7 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
     const [locale, setLocaleState] = useState<Locale>(() => {
+        if (typeof window === "undefined") return "en";
         const stored = localStorage.getItem("locale") as Locale | null;
         return stored === "en" || stored === "ar" ? stored : "en";
     });
