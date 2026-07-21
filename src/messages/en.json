@@ -19,6 +19,63 @@
       "heroFeature1Desc": "Apply to top roles in seconds with one-click syncing.",
       "heroFeature2Title": "AI Insights",
       "heroFeature2Desc": "Receive real-time feedback on your resume relevance."
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start your career journey with intelligence.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "reqLength": "8+ characters",
+      "reqUppercase": "Uppercase",
+      "reqNumber": "One number",
+      "reqSpecial": "Special char",
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "createAccount": "Create Account",
+      "haveAccount": "Already have an account?",
+      "logIn": "Log in",
+      "heroBadge": "Next Gen Recruitment",
+      "heroTitle": "Join the future of job hunting.",
+      "heroSubtitle": "Experience a frictionless application process powered by JobFlow's intelligent ATS matching engine.",
+      "heroFeature1Title": "Fast Track",
+      "heroFeature1Desc": "Apply to top roles in seconds with one-click syncing.",
+      "heroFeature2Title": "AI Insights",
+      "heroFeature2Desc": "Receive real-time feedback on your resume relevance."
+    },
+    "forgotPassword": {
+      "title": "Forgot password?",
+      "subtitle": "Enter your email and we'll send you a code to reset your password",
+      "email": "Email Address",
+      "emailPlaceholder": "name@company.com",
+      "sendCode": "Send Reset Code",
+      "backToLogin": "Back to login",
+      "trouble": "Having trouble?",
+      "contactSupport": "Contact support"
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "subtitle": "We've sent a 6-digit verification code to your email. Please enter it below along with your new credentials.",
+      "code": "Verification Code",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Min. 8 characters",
+      "confirmPassword": "Confirm New Password",
+      "confirmPasswordPlaceholder": "Repeat new password",
+      "resetButton": "Reset Password",
+      "noCode": "Didn't receive the code?",
+      "resend": "Resend code",
+      "backToLogin": "Back to Login",
+      "footer": "JobFlow Enterprise Security Framework v2.4.0"
+    },
+    "verifyResetCode": {
+      "title": "Enter verification code",
+      "subtitle": "We've sent a 6-digit code to your email. Enter it below to continue.",
+      "verify": "Verify Code",
+      "noCode": "Didn't receive the code?",
+      "resend": "Resend code",
+      "backToLogin": "Back to Login"
     }
   },
   "common": {
