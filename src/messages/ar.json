@@ -86,6 +86,28 @@
       "skipForNow": "تخطي الآن"
     }
   },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "jobs": "الوظائف",
+    "companies": "الشركات",
+    "interviews": "المقابلات",
+    "notifications": "الإشعارات",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج"
+  },
+  "dashboard": {
+    "welcomeBack": "مرحباً بعودتك",
+    "totalApplications": "إجمالي الطلبات",
+    "responseRate": "معدل الاستجابة",
+    "interviewRate": "معدل المقابلات",
+    "offerRate": "معدل العروض",
+    "applicationsOverTime": "الطلبات عبر الزمن",
+    "statusBreakdown": "توزيع الحالات",
+    "recentActivity": "النشاط الأخير",
+    "upcomingInterviews": "المقابلات القادمة",
+    "noActivity": "لا يوجد نشاط حديث بعد",
+    "noInterviews": "لا توجد مقابلات قادمة"
+  },
   "common": {
     "appName": "جوب فلو",
     "copyright": "© 2026 أنظمة جوب فلو الذكية. جميع الحقوق محفوظة."
