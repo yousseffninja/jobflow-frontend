@@ -76,6 +76,14 @@
       "noCode": "Didn't receive the code?",
       "resend": "Resend code",
       "backToLogin": "Back to Login"
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "subtitle": "We've sent a 6-digit code to your email. Enter it below to verify your account.",
+      "verify": "Verify Email",
+      "noCode": "Didn't receive the code?",
+      "resend": "Resend code",
+      "skipForNow": "Skip for now"
     }
   },
   "common": {

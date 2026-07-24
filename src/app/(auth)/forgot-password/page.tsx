@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { useLocale } from "@/providers/locale-provider";
+import { forgotPassword } from "@/lib/auth-service";
 
 export default function ForgotPasswordPage() {
     const { t, dir } = useLocale();
@@ -12,10 +13,19 @@ export default function ForgotPasswordPage() {
     const ArrowIcon = dir === "rtl" ? ArrowLeft : ArrowRight;
     const BackArrowIcon = dir === "rtl" ? ArrowRight : ArrowLeft;
     const [email, setEmail] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        router.push(`/verify-reset-code?email=${encodeURIComponent(email)}`);
+        setIsLoading(true);
+        try {
+            await forgotPassword({ email });
+        } catch {
+            // deliberately silent — backend never reveals whether the email exists
+        } finally {
+            setIsLoading(false);
+            router.push(`/verify-reset-code?email=${encodeURIComponent(email)}`);
+        }
     };
 
     return (
@@ -54,10 +64,11 @@ export default function ForgotPasswordPage() {
 
                     <button
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 rounded-md bg-primary text-on-primary font-medium py-2.5 text-sm hover:opacity-90 transition"
+                        disabled={isLoading}
+                        className="w-full flex items-center justify-center gap-2 rounded-md bg-primary text-on-primary font-medium py-2.5 text-sm hover:opacity-90 transition disabled:opacity-60"
                     >
-                        {t("auth.forgotPassword.sendCode")}
-                        <ArrowIcon className="h-4 w-4" />
+                        {isLoading ? "..." : t("auth.forgotPassword.sendCode")}
+                        {!isLoading && <ArrowIcon className="h-4 w-4" />}
                     </button>
 
                     <div className="border-t border-outline-variant pt-4">
