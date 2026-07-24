@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Inter, JetBrains_Mono } from "next/font/google";
 import { LocaleProvider } from "@/providers/locale-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { QueryProvider } from "@/providers/query-provider";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
@@ -35,13 +36,13 @@ export default function RootLayout({
                 }}
             />
         </head>
-            <body className={`${geist.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-                <ThemeProvider>
-                    <LocaleProvider>
-                        {children}
-                    </LocaleProvider>
-                </ThemeProvider>
-            </body>
+        <body className={`${geist.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+        <QueryProvider>
+            <ThemeProvider>
+                <LocaleProvider>{children}</LocaleProvider>
+            </ThemeProvider>
+        </QueryProvider>
+        </body>
         </html>
     );
 }

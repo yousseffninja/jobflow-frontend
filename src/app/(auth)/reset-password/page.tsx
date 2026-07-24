@@ -2,19 +2,47 @@
 
 import Link from "next/link";
 import { Suspense, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, Sparkles, Lock, ShieldCheck } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ArrowLeft, ArrowRight, Sparkles, Lock, ShieldCheck, AlertCircle } from "lucide-react";
 import { useLocale } from "@/providers/locale-provider";
+import { resetPassword } from "@/lib/auth-service";
+import { isAxiosError } from "axios";
 
 function ResetPasswordForm() {
     const { t, dir } = useLocale();
+    const router = useRouter();
     const searchParams = useSearchParams();
     const email = searchParams.get("email") || "";
     const code = searchParams.get("code") || "";
     const ArrowIcon = dir === "rtl" ? ArrowLeft : ArrowRight;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [newPassword, setNewPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setError(null);
+
+        if (newPassword !== confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            await resetPassword({ email, code, newPassword });
+            router.push("/login");
+        } catch (err) {
+            if (isAxiosError(err) && err.response?.data?.message) {
+                setError(err.response.data.message);
+            } else {
+                setError("Something went wrong. Please try again.");
+            }
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -36,8 +64,16 @@ function ResetPasswordForm() {
                     {t("auth.resetPassword.title")}
                 </h1>
                 <p className="text-sm text-on-surface-variant mb-6">
-                    Set a new password for <span className="text-on-surface font-medium">{email}</span>
+                    Set a new password for{" "}
+                    <span className="text-on-surface font-medium">{email}</span>
                 </p>
+
+                {error && (
+                    <div className="flex items-center gap-2 rounded-md bg-error-container text-on-error-container px-3 py-2.5 text-sm mb-4">
+                        <AlertCircle className="h-4 w-4 shrink-0" />
+                        {error}
+                    </div>
+                )}
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
@@ -49,6 +85,8 @@ function ResetPasswordForm() {
                             <input
                                 type="password"
                                 required
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
                                 placeholder={t("auth.resetPassword.newPasswordPlaceholder")}
                                 className="w-full rounded-md border border-outline-variant bg-surface-container-lowest ps-10 pe-3 py-2.5 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-3 focus:ring-primary-container/20 transition"
                             />
@@ -64,6 +102,8 @@ function ResetPasswordForm() {
                             <input
                                 type="password"
                                 required
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
                                 placeholder={t("auth.resetPassword.confirmPasswordPlaceholder")}
                                 className="w-full rounded-md border border-outline-variant bg-surface-container-lowest ps-10 pe-3 py-2.5 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-3 focus:ring-primary-container/20 transition"
                             />
@@ -72,10 +112,11 @@ function ResetPasswordForm() {
 
                     <button
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 rounded-md bg-primary text-on-primary font-medium py-2.5 text-sm hover:opacity-90 transition"
+                        disabled={isLoading}
+                        className="w-full flex items-center justify-center gap-2 rounded-md bg-primary text-on-primary font-medium py-2.5 text-sm hover:opacity-90 transition disabled:opacity-60"
                     >
-                        {t("auth.resetPassword.resetButton")}
-                        <ArrowIcon className="h-4 w-4" />
+                        {isLoading ? "..." : t("auth.resetPassword.resetButton")}
+                        {!isLoading && <ArrowIcon className="h-4 w-4" />}
                     </button>
                 </form>
 
