@@ -78,6 +78,28 @@
       "backToLogin": "Back to Login"
     }
   },
+  "nav": {
+    "dashboard": "Dashboard",
+    "jobs": "Jobs",
+    "companies": "Companies",
+    "interviews": "Interviews",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "dashboard": {
+    "welcomeBack": "Welcome back",
+    "totalApplications": "Total Applications",
+    "responseRate": "Response Rate",
+    "interviewRate": "Interview Rate",
+    "offerRate": "Offer Rate",
+    "applicationsOverTime": "Applications Over Time",
+    "statusBreakdown": "Status Breakdown",
+    "recentActivity": "Recent Activity",
+    "upcomingInterviews": "Upcoming Interviews",
+    "noActivity": "No recent activity yet",
+    "noInterviews": "No upcoming interviews"
+  },
   "common": {
     "appName": "JobFlow",
     "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."
