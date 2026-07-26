@@ -4,6 +4,7 @@ import { LocaleProvider } from "@/providers/locale-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { QueryProvider } from "@/providers/query-provider";
 import "./globals.css";
+import {AuthInitializer} from "@/providers/auth-initializer";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -36,13 +37,15 @@ export default function RootLayout({
                 }}
             />
         </head>
-        <body className={`${geist.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-        <QueryProvider>
-            <ThemeProvider>
-                <LocaleProvider>{children}</LocaleProvider>
-            </ThemeProvider>
-        </QueryProvider>
-        </body>
+            <body className={`${geist.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+                <QueryProvider>
+                    <ThemeProvider>
+                        <LocaleProvider>
+                            <AuthInitializer>{children}</AuthInitializer>
+                        </LocaleProvider>
+                    </ThemeProvider>
+                </QueryProvider>
+            </body>
         </html>
     );
 }
