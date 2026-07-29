@@ -108,6 +108,53 @@
     "noActivity": "No recent activity yet",
     "noInterviews": "No upcoming interviews"
   },
+  "companies": {
+    "title": "Companies",
+    "subtitle": "Manage the companies you're tracking",
+    "addCompany": "Add Company",
+    "searchPlaceholder": "Search companies...",
+    "name": "Company Name",
+    "website": "Website",
+    "hrContactName": "HR Contact Name",
+    "hrContactEmail": "HR Contact Email",
+    "create": "Create Company",
+    "cancel": "Cancel",
+    "noCompanies": "No companies yet",
+    "noCompaniesDesc": "Add your first company to start tracking opportunities",
+    "jobsCount": "jobs"
+  },
+  "jobs": {
+    "title": "Jobs",
+    "subtitle": "Track every opportunity in one place",
+    "addJob": "Add Job",
+    "searchPlaceholder": "Search jobs...",
+    "allStatuses": "All Statuses",
+    "allPriorities": "All Priorities",
+    "jobTitle": "Job Title",
+    "company": "Company",
+    "priority": "Priority",
+    "salaryMin": "Min Salary",
+    "salaryMax": "Max Salary",
+    "sourceUrl": "Job Posting URL",
+    "description": "Description",
+    "create": "Add Job",
+    "cancel": "Cancel",
+    "noJobs": "No jobs yet",
+    "noJobsDesc": "Add your first job to start tracking your applications",
+    "status": {
+      "WISHLIST": "Wishlist",
+      "APPLIED": "Applied",
+      "INTERVIEWING": "Interviewing",
+      "OFFER": "Offer",
+      "REJECTED": "Rejected",
+      "WITHDRAWN": "Withdrawn"
+    },
+    "priorityLevel": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High"
+    }
+  },
   "common": {
     "appName": "JobFlow",
     "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."

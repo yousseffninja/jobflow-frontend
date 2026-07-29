@@ -108,6 +108,53 @@
     "noActivity": "لا يوجد نشاط حديث بعد",
     "noInterviews": "لا توجد مقابلات قادمة"
   },
+  "companies": {
+    "title": "الشركات",
+    "subtitle": "إدارة الشركات التي تتابعها",
+    "addCompany": "إضافة شركة",
+    "searchPlaceholder": "ابحث عن شركات...",
+    "name": "اسم الشركة",
+    "website": "الموقع الإلكتروني",
+    "hrContactName": "اسم مسؤول التوظيف",
+    "hrContactEmail": "بريد مسؤول التوظيف",
+    "create": "إنشاء شركة",
+    "cancel": "إلغاء",
+    "noCompanies": "لا توجد شركات بعد",
+    "noCompaniesDesc": "أضف أول شركة لبدء تتبع الفرص",
+    "jobsCount": "وظائف"
+  },
+  "jobs": {
+    "title": "الوظائف",
+    "subtitle": "تابع كل فرصة في مكان واحد",
+    "addJob": "إضافة وظيفة",
+    "searchPlaceholder": "ابحث عن وظائف...",
+    "allStatuses": "كل الحالات",
+    "allPriorities": "كل الأولويات",
+    "jobTitle": "المسمى الوظيفي",
+    "company": "الشركة",
+    "priority": "الأولوية",
+    "salaryMin": "الحد الأدنى للراتب",
+    "salaryMax": "الحد الأقصى للراتب",
+    "sourceUrl": "رابط الوظيفة",
+    "description": "الوصف",
+    "create": "إضافة وظيفة",
+    "cancel": "إلغاء",
+    "noJobs": "لا توجد وظائف بعد",
+    "noJobsDesc": "أضف أول وظيفة لبدء تتبع طلباتك",
+    "status": {
+      "WISHLIST": "قائمة الأمنيات",
+      "APPLIED": "تم التقديم",
+      "INTERVIEWING": "مقابلات",
+      "OFFER": "عرض عمل",
+      "REJECTED": "مرفوض",
+      "WITHDRAWN": "منسحب"
+    },
+    "priorityLevel": {
+      "LOW": "منخفضة",
+      "MEDIUM": "متوسطة",
+      "HIGH": "عالية"
+    }
+  },
   "common": {
     "appName": "جوب فلو",
     "copyright": "© 2026 أنظمة جوب فلو الذكية. جميع الحقوق محفوظة."
