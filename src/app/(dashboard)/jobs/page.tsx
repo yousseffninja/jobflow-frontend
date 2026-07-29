@@ -7,6 +7,7 @@ import { useLocale } from "@/providers/locale-provider";
 import { getJobs, createJob, updateJobStatus, Job, JobStatus, Priority } from "@/lib/job-service";
 import { getCompanies } from "@/lib/company-service";
 import { StatusBadge } from "@/components/jobs/StatusBadge";
+import { useRouter } from "next/navigation";
 
 const STATUSES: JobStatus[] = ["WISHLIST", "APPLIED", "INTERVIEWING", "OFFER", "REJECTED", "WITHDRAWN"];
 const PRIORITIES: Priority[] = ["LOW", "MEDIUM", "HIGH"];
@@ -18,6 +19,8 @@ export default function JobsPage() {
     const [statusFilter, setStatusFilter] = useState<JobStatus | "">("");
     const [priorityFilter, setPriorityFilter] = useState<Priority | "">("");
     const [showModal, setShowModal] = useState(false);
+
+    const router = useRouter();
 
     const { data, isLoading } = useQuery({
         queryKey: ["jobs", search, statusFilter, priorityFilter],
@@ -114,7 +117,8 @@ export default function JobsPage() {
                     {data.content.map((job: Job) => (
                         <div
                             key={job.id}
-                            className="flex items-center gap-4 rounded-lg border border-outline-variant bg-surface-container-lowest p-4"
+                            onClick={() => router.push(`/jobs/${job.id}`)}
+                            className="flex items-center gap-4 rounded-lg border border-outline-variant bg-surface-container-lowest p-4 cursor-pointer hover:border-primary transition"
                         >
                             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-container-high overflow-hidden">
                                 {job.companyLogoUrl ? (
