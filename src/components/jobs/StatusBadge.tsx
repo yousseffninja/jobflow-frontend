@@ -21,3 +21,12 @@ export function StatusBadge({ status }: { status: JobStatus }) {
     </span>
     );
 }
+
+export const statusColorHex: Record<JobStatus, string> = {
+    WISHLIST: "#818cf8",
+    APPLIED: "#3525cd",
+    INTERVIEWING: "#f7bd3e",
+    OFFER: "#22c55e",
+    REJECTED: "#ba1a1a",
+    WITHDRAWN: "#9ca3af",
+};
