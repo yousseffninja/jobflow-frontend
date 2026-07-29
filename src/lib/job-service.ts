@@ -60,3 +60,22 @@ export async function updateJobStatus(id: string, status: JobStatus, note?: stri
 export async function deleteJob(id: string) {
     await apiClient.delete(`/api/v1/jobs/${id}`);
 }
+
+export type JobStatusHistoryEntry = {
+    oldStatus: JobStatus | null;
+    newStatus: JobStatus;
+    note: string | null;
+    changedAt: string;
+};
+
+export async function getJob(id: string) {
+    const { data } = await apiClient.get<ApiResponse<Job>>(`/api/v1/jobs/${id}`);
+    return data.data;
+}
+
+export async function getJobStatusHistory(id: string) {
+    const { data } = await apiClient.get<ApiResponse<JobStatusHistoryEntry[]>>(
+        `/api/v1/jobs/${id}/status-history`
+    );
+    return data.data;
+}

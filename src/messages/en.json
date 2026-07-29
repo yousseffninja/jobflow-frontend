@@ -155,6 +155,51 @@
       "HIGH": "High"
     }
   },
+  "jobDetail": {
+    "back": "Back to Jobs",
+    "overview": "Overview",
+    "timeline": "Timeline",
+    "interviews": "Interviews",
+    "salary": "Salary",
+    "notSpecified": "Not specified",
+    "posting": "Job Posting",
+    "viewPosting": "View original posting",
+    "description": "Description",
+    "noDescription": "No description added",
+    "statusChanged": "Status changed",
+    "created": "Job created",
+    "scheduleInterview": "Schedule Interview",
+    "noInterviewsYet": "No interviews scheduled yet",
+    "outcome": {
+      "PENDING": "Pending",
+      "PASSED": "Passed",
+      "FAILED": "Failed"
+    },
+    "type": {
+      "PHONE_SCREEN": "Phone Screen",
+      "TECHNICAL": "Technical",
+      "ONSITE": "Onsite",
+      "HR": "HR",
+      "FINAL": "Final"
+    }
+  },
+  "interviewsPage": {
+    "title": "Interviews",
+    "subtitle": "Keep track of every conversation",
+    "schedule": "Schedule Interview",
+    "job": "Job",
+    "type": "Interview Type",
+    "dateTime": "Date & Time",
+    "duration": "Duration (minutes)",
+    "location": "Location / Link",
+    "interviewer": "Interviewer Name",
+    "cancel": "Cancel",
+    "noInterviews": "No interviews scheduled",
+    "noInterviewsDesc": "Schedule your first interview to keep track of it here",
+    "feedback": "Feedback",
+    "feedbackPlaceholder": "How did it go?",
+    "submitFeedback": "Submit Feedback"
+  },
   "common": {
     "appName": "JobFlow",
     "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."

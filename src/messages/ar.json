@@ -155,6 +155,51 @@
       "HIGH": "عالية"
     }
   },
+  "jobDetail": {
+    "back": "العودة إلى الوظائف",
+    "overview": "نظرة عامة",
+    "timeline": "الجدول الزمني",
+    "interviews": "المقابلات",
+    "salary": "الراتب",
+    "notSpecified": "غير محدد",
+    "posting": "إعلان الوظيفة",
+    "viewPosting": "عرض الإعلان الأصلي",
+    "description": "الوصف",
+    "noDescription": "لم تتم إضافة وصف",
+    "statusChanged": "تم تغيير الحالة",
+    "created": "تم إنشاء الوظيفة",
+    "scheduleInterview": "جدولة مقابلة",
+    "noInterviewsYet": "لا توجد مقابلات مجدولة بعد",
+    "outcome": {
+      "PENDING": "قيد الانتظار",
+      "PASSED": "ناجحة",
+      "FAILED": "غير ناجحة"
+    },
+    "type": {
+      "PHONE_SCREEN": "مكالمة هاتفية",
+      "TECHNICAL": "تقنية",
+      "ONSITE": "حضورية",
+      "HR": "الموارد البشرية",
+      "FINAL": "نهائية"
+    }
+  },
+  "interviewsPage": {
+    "title": "المقابلات",
+    "subtitle": "تابع كل محادثة",
+    "schedule": "جدولة مقابلة",
+    "job": "الوظيفة",
+    "type": "نوع المقابلة",
+    "dateTime": "التاريخ والوقت",
+    "duration": "المدة (دقائق)",
+    "location": "الموقع / الرابط",
+    "interviewer": "اسم المُحاور",
+    "cancel": "إلغاء",
+    "noInterviews": "لا توجد مقابلات مجدولة",
+    "noInterviewsDesc": "جدول أول مقابلة لك لتتابعها هنا",
+    "feedback": "الملاحظات",
+    "feedbackPlaceholder": "كيف سارت المقابلة؟",
+    "submitFeedback": "إرسال الملاحظات"
+  },
   "common": {
     "appName": "جوب فلو",
     "copyright": "© 2026 أنظمة جوب فلو الذكية. جميع الحقوق محفوظة."
