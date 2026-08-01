@@ -22,7 +22,7 @@ export async function getNotifications() {
 }
 
 export async function getUnreadCount() {
-    const { data } = await apiClient.get<ApiResponse<{ count: number }>>(
+    const { data } = await apiClient.get<ApiResponse<number>>(
         "/api/v1/notifications/unread-count"
     );
     return data.data ?? 0;
