@@ -143,9 +143,11 @@ export default function JobsPage() {
 
                             <select
                                 value={job.currentStatus}
-                                onChange={(e) =>
-                                    statusMutation.mutate({ id: job.id, status: e.target.value as JobStatus })
-                                }
+                                onClick={(e) => e.stopPropagation()}
+                                onChange={(e) => {
+                                    e.stopPropagation();
+                                    statusMutation.mutate({ id: job.id, status: e.target.value as JobStatus });
+                                }}
                                 className="rounded-md border border-outline-variant bg-surface-container-lowest px-2 py-1 text-xs text-on-surface focus:outline-none focus:border-primary transition"
                             >
                                 {STATUSES.map((s) => (

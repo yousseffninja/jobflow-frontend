@@ -200,6 +200,12 @@
     "feedbackPlaceholder": "How did it go?",
     "submitFeedback": "Submit Feedback"
   },
+  "notificationsPanel": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "empty": "No notifications yet",
+    "emptyDesc": "You'll see updates about your jobs and interviews here"
+  },
   "common": {
     "appName": "JobFlow",
     "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."

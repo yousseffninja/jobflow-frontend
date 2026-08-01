@@ -3,12 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import { apiClient } from "@/lib/api-client";
 import { useAuthStore } from "@/store/auth-store";
+import { useNotificationStream } from "@/hooks/useNotificationStream";
 
 export function AuthInitializer({ children }: { children: React.ReactNode }) {
     const [isReady, setIsReady] = useState(false);
     const setAuth = useAuthStore((state) => state.setAuth);
     const logout = useAuthStore((state) => state.logout);
     const hasRun = useRef(false);
+
+    useNotificationStream();
 
     useEffect(() => {
         if (hasRun.current) return;
