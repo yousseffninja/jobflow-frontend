@@ -206,6 +206,22 @@
     "empty": "No notifications yet",
     "emptyDesc": "You'll see updates about your jobs and interviews here"
   },
+  "aiTools": {
+    "title": "AI Tools",
+    "resumeReview": "Resume Review",
+    "resumeReviewDesc": "Upload your resume to get a match score against this job",
+    "uploadResume": "Upload Resume (PDF)",
+    "analyze": "Analyze",
+    "coverLetter": "Cover Letter",
+    "coverLetterDesc": "Generate a tailored cover letter draft",
+    "generate": "Generate",
+    "interviewQuestions": "Interview Questions",
+    "interviewQuestionsDesc": "Get likely interview questions for this role",
+    "generating": "Generating...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "regenerate": "Regenerate"
+  },
   "common": {
     "appName": "JobFlow",
     "copyright": "© 2026 JobFlow Intelligence Systems. All rights reserved."
