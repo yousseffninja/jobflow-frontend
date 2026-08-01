@@ -4,6 +4,7 @@ import { Bell, Sun, Moon, Languages, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useLocale } from "@/providers/locale-provider";
 import { useAuthStore } from "@/store/auth-store";
+import {NotificationBell} from "@/components/layout/NotificationBell";
 
 type TopbarProps = {
     onMenuClick: () => void;
@@ -42,9 +43,7 @@ export function Topbar({ onMenuClick }: TopbarProps) {
                     {theme === "dark" ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
                 </button>
 
-                <button className="flex items-center justify-center h-9 w-9 rounded-md text-on-surface-variant hover:bg-surface-container transition relative">
-                    <Bell className="h-4.5 w-4.5" />
-                </button>
+                <NotificationBell />
 
                 <div className="flex items-center gap-2 ps-2 ms-1 border-s border-outline-variant">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-container text-on-primary-container text-sm font-medium">
