@@ -7,6 +7,7 @@ import { useLocale } from "@/providers/locale-provider";
 import { getJob, getJobStatusHistory } from "@/lib/job-service";
 import { getInterviewsByJob } from "@/lib/interview-service";
 import { StatusBadge } from "@/components/jobs/StatusBadge";
+import { AiToolsSection } from "@/components/jobs/AiToolsSection";
 
 export default function JobDetailPage() {
     const { t, dir } = useLocale();
@@ -128,6 +129,7 @@ export default function JobDetailPage() {
                             </ul>
                         )}
                     </div>
+                    <AiToolsSection jobId={jobId} />
                 </div>
 
                 {/* Right: Timeline */}
